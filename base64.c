@@ -38,7 +38,7 @@ void encode(char src[])
     length = strlen(binary_string);
     while (length % 6 != 0)
     {
-        strcat(binary_string, "0"); // pad the binary string with '0' bit until it's length is not divisible by 6
+        strcat(binary_string, "0"); // pad the binary string with '0' bit until it's length is not multiple of 6
         length = strlen(binary_string);
     }
     int num_of_segments = (length + 5) / 6; // calculate the number ofsegments, such that every segment contains 6 bits
@@ -61,7 +61,7 @@ void encode(char src[])
     length = strlen(base64_string);
     while (length % 4 != 0)
     {
-        base64_string[length] = '='; // pad extra '=' until the length of final string is divisble by 4
+        base64_string[length] = '='; // pad extra '=' until the length of final string is multiple of 4
         length++;
     }
     base64_string[i] = '\0';
