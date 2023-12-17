@@ -64,12 +64,12 @@ void encode(char src[])
         base64_string[length] = '='; // pad extra '=' until the length of final string is divisble by 4
         length++;
     }
-    base64_string[length] = '\0';
+    base64_string[i] = '\0';
     printf("%s", base64_string);
 }
 
 int main()
 {
-    char src[] = "Vishv";
+    char src[] = "Ashpak";
     encode(src);
 }
